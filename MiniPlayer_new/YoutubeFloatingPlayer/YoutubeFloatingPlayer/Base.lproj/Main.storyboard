@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ppr-pw-Sgi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Lpf-hF-hQG">
+            <objects>
+                <viewController id="k5V-Xy-j7W" customClass="ViewController" customModule="YouTubeFloatingPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Kz-Kc-ZOs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ybe-tW-5n9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZYC-1v-uFW">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-cf-zwY">
+                                <rect key="frame" x="96.5" y="269" width="207" height="62"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="36"/>
+                                <state key="normal" title="Show Player">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPlayerWithSender:" destination="k5V-Xy-j7W" eventType="touchUpInside" id="NHt-B3-c4z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I9Y-Gq-De7"/>
+                        <color key="backgroundColor" red="0.3392308839" green="0.56853510939999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ybe-tW-5n9" firstAttribute="top" secondItem="7u7-cf-zwY" secondAttribute="bottom" constant="14" id="3Tq-T5-Cda"/>
+                            <constraint firstItem="7u7-cf-zwY" firstAttribute="centerX" secondItem="ZYC-1v-uFW" secondAttribute="centerX" id="W7y-q5-2NE"/>
+                            <constraint firstItem="7u7-cf-zwY" firstAttribute="centerY" secondItem="ZYC-1v-uFW" secondAttribute="centerY" id="lyd-hK-DOG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3Tq-T5-Cda"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Kj-fz-msc">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Eak-CN-YDW">
+                            <connections>
+                                <segue destination="X1l-Ch-ee5" kind="show" id="zDy-Tj-wwS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2P2-ld-iYo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925" y="305"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="pmb-0I-jP0">
+            <objects>
+                <viewController id="X1l-Ch-ee5" customClass="NextViewController" customModule="YouTubeFloatingPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JiP-OK-adi"/>
+                        <viewControllerLayoutGuide type="bottom" id="TSF-dr-dXa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LP9-Fv-SRh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUw-MI-e4J">
+                                <rect key="frame" x="75" y="269" width="251" height="62"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="36"/>
+                                <state key="normal" title="Remove Player">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="removePlayer:" destination="X1l-Ch-ee5" eventType="touchUpInside" id="Tju-n5-tGa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BSk-bG-tRk"/>
+                        <color key="backgroundColor" red="1" green="0.38867510900000002" blue="0.52314536160000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KUw-MI-e4J" firstAttribute="centerX" secondItem="LP9-Fv-SRh" secondAttribute="centerX" id="hju-3T-9aT"/>
+                            <constraint firstItem="KUw-MI-e4J" firstAttribute="centerY" secondItem="LP9-Fv-SRh" secondAttribute="centerY" id="zTU-l6-EkH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qy0-Aw-iEt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7MB-Ii-dwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925" y="895"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="icU-bw-XgG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ppr-pw-Sgi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ME-ra-1ZK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k5V-Xy-j7W" kind="relationship" relationship="rootViewController" id="QCJ-j8-gMe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xk3-wx-Zf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="405"/>
+        </scene>
+    </scenes>
+</document>
